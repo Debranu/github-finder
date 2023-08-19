@@ -3,7 +3,9 @@ import {
   FaStore,
   FaUsers,
   FaUserFriends,
-  FaHome,
+  FaTwitter,
+  FaMapMarker,
+  FaLink,
 } from "react-icons/fa";
 import { useEffect, useContext } from "react";
 import GithubContetxt from "../context/github/GithubContext";
@@ -87,12 +89,14 @@ function User() {
             <div className="rounded-lg shadow-md bg-base-100 stats">
               {location && (
                 <div className="stat">
+                  <FaMapMarker className="stat-figure text-3xl" />
                   <div className="stat-title text-md">Location</div>
                   <div className="text-lg stat-value">{location}</div>
                 </div>
               )}
               {blog && (
                 <div className="stat">
+                  <FaLink className="stat-figure text-3xl" />
                   <div className="stat-title text-md">Website</div>
                   <div className="text-lg stat-value">
                     <a
@@ -107,6 +111,7 @@ function User() {
               )}
               {twitter_username && (
                 <div className="stat">
+                  <FaTwitter className="stat-figure text-3xl" />
                   <div className="stat-title text-md">Twitter</div>
                   <div className="text-lg stat-value">
                     <a
